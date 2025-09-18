@@ -1,12 +1,31 @@
+/* Ensure Thematic areas dropdown displays below its parent */
+.thematic-dropdown > .dropdown-menu {
+    top: 100%;
+    left: 0;
+    position: absolute;
+}
 .logo {
-    display: flex;
     align-items: center;
     width: 100%;
     margin-left: 10px;
+    background-repeat: no-repeat;
+    display: flex;
+    background-size: 100%;
+    color: #800404;
 }
 
-.logo h1 {
-    margin-left: 10px;
+.sub-title h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.sub-title p {
+    color: #e8e9e0;
+    font-style: italic;
+    font-weight: bolder;
+
 }
 
 .navbar {
@@ -33,7 +52,7 @@
 }
 
 .nav-link {
-    color: rgb(189, 18, 18);
+    color: rgb(180, 34, 34);
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     display: block;
@@ -47,25 +66,37 @@
     border-radius: 5px;
 }
 
-.dropdown-menu {
-    position: absolute;
+.nav-item .dropdown-menu{
     top: 100%;
     left: 0;
+    position: absolute;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
     background-color: #c0b492;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(219, 28, 28, 0.2);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
+    z-index: 1001;
     transform: translateY(10px);
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
     border-radius: 4px;
-}
-
-.dropdown-menu li a {
-    color: rgb(19, 20, 19);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 10px;
+}
+.dropdown .dropdown-menu li a{
+    color: #110f0f;
+}
+.thematic-dropdown > .dropdown-menu {
+    top: 100%;
+    left: 0;
+    position: relative;
+}
+.projects-dropdown > .dropdown-menu {
+    top: 100%;
+    left: 0;
+    position: relative;
 }
 
 .dropdown-menu li {
@@ -76,9 +107,9 @@
     background-color: #e71818;
 }
 
-.dropdown.active .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
+.dropdown.active>.dropdown-menu{
+    opacity: 0;
+    visibility:hidden;
     transform: translateY(0);
 }
 
@@ -339,7 +370,83 @@
     color: #cab9b9;
 }
 
-/*gallery*/
-.gallery-container {
-    text-align: center;
+/*home-photos*/
+.slide-container {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 800px;
+
+
+
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px, 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: rgba(110, 33, 33, 0.8);
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+    background-color: white;
+    transform: scale(1.2);
 }
