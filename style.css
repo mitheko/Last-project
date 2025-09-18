@@ -1,9 +1,10 @@
 /* Ensure Thematic areas dropdown displays below its parent */
-.thematic-dropdown > .dropdown-menu {
+.thematic-dropdown>.dropdown-menu {
     top: 100%;
     left: 0;
     position: absolute;
 }
+
 .logo {
     align-items: center;
     width: 100%;
@@ -66,11 +67,12 @@
     border-radius: 5px;
 }
 
-.nav-item .dropdown-menu{
+.nav-item .dropdown-menu {
     top: 100%;
     left: 0;
     position: absolute;
 }
+
 .dropdown-menu {
     position: absolute;
     top: 0;
@@ -85,15 +87,18 @@
     border-radius: 4px;
     padding: 10px;
 }
-.dropdown .dropdown-menu li a{
+
+.dropdown .dropdown-menu li a {
     color: #110f0f;
 }
-.thematic-dropdown > .dropdown-menu {
+
+.thematic-dropdown>.dropdown-menu {
     top: 100%;
     left: 0;
     position: relative;
 }
-.projects-dropdown > .dropdown-menu {
+
+.projects-dropdown>.dropdown-menu {
     top: 100%;
     left: 0;
     position: relative;
@@ -107,9 +112,9 @@
     background-color: #e71818;
 }
 
-.dropdown.active>.dropdown-menu{
+.dropdown.active>.dropdown-menu {
     opacity: 0;
-    visibility:hidden;
+    visibility: hidden;
     transform: translateY(0);
 }
 
