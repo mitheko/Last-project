@@ -1,8 +1,7 @@
-/* Ensure Thematic areas dropdown displays below its parent */
-.thematic-dropdown>.dropdown-menu {
-    top: 100%;
-    left: 0;
-    position: absolute;
+body {
+    background-image: url(ipik.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .logo {
@@ -12,7 +11,7 @@
     background-repeat: no-repeat;
     display: flex;
     background-size: 100%;
-    color: #800404;
+    color: #272525;
 }
 
 .sub-title h1 {
@@ -29,94 +28,48 @@
 
 }
 
-.navbar {
-    margin-left: 150px;
-    display: flex;
-    padding-right: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid black;
-    background-color: #c0b492;
+nav {
+    margin-left: 350px;
+    padding: 5px;
 }
 
-.nav-list {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    padding-left: 10px;
-    justify-content: center;
-    color: rgb(148, 80, 80);
-}
-
-.nav-item {
-    position: relative;
-    margin: 0, 20px;
-}
-
-.nav-link {
-    color: rgb(180, 34, 34);
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.nav-link:hover {
-    background-color: #110f0f;
-    border-radius: 5px;
-}
-
-.nav-item .dropdown-menu {
-    top: 100%;
-    left: 0;
-    position: absolute;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    margin-top: -1px;
-    background-color: #c0b492;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(219, 28, 28, 0.2);
-    z-index: 1001;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-    border-radius: 4px;
+nav ul {
+    float: left;
     padding: 10px;
 }
 
-.dropdown .dropdown-menu li a {
-    color: #110f0f;
-}
-
-.thematic-dropdown>.dropdown-menu {
-    top: 100%;
-    left: 0;
+nav ul li {
+    list-style: none;
+    float: left;
     position: relative;
 }
 
-.projects-dropdown>.dropdown-menu {
-    top: 100%;
-    left: 0;
-    position: relative;
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #ca1414;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.dropdown-menu li {
-    color: #bd35a6;
+nav ul li a:hover {
+    background-color: #161616;
+    border-radius: 5px;
 }
 
-.dropdown-items:hover {
-    background-color: #e71818;
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
-.dropdown.active>.dropdown-menu {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(0);
+nav ul li:hover ul {
+    display: block;
 }
+
+
 
 /* home page */
 .container h1 {
@@ -132,7 +85,7 @@
     padding: 10px;
     font-family: 'Arial', sans-serif;
     font-size: 18px;
-    color: #333;
+    color: #dbd4d4;
     line-height: 1.6;
 }
 
@@ -285,6 +238,7 @@
     background-color: blue;
     padding: 20px;
     border-radius: 10px;
+    margin-top: 10px;
 }
 
 .contact h1 {
@@ -311,7 +265,7 @@
 .header {
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgba(0, 0, 255, 0.712);
+    color: rgba(162, 0, 255, 0.712);
 }
 
 .contact-group {
@@ -367,6 +321,23 @@
 .contact-box2 i {
     color: blue;
     font-size: 30px;
+}
+
+.donate-btn {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: chartreuse;
+}
+
+.donate-btn a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.donate-box {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .footer {
